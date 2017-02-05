@@ -18,7 +18,8 @@ class GameViewController: UIViewController {
        
         for i in 0...self.worldWidth - 1 {
             
-            if i == self.worldWidth - 1{
+            //if i == self.worldWidth - 1{
+            if i == Int(Float(self.worldWidth) / 2.0){
                 self.worldLine.append(true)
             }else{
                 self.worldLine.append(false)
@@ -86,9 +87,6 @@ class GameViewController: UIViewController {
             geometryNode.position = SCNVector3(x: Float(index), y: Float(self.generation * -1), z: 0)
             scnScene.rootNode.addChildNode(geometryNode)
         }
-        
-    
-        
         index = index + 1
     }
     self.cameraNode.position.y = self.cameraNode.position.y - 1
@@ -106,11 +104,11 @@ class GameViewController: UIViewController {
         if self.worldLine[i-1] && self.worldLine[i] && self.worldLine[i+1]{
             newLine.append(false)
         } else if self.worldLine[i-1] && self.worldLine[i] && !self.worldLine[i+1]{
-            newLine.append(true)
-        }else if self.worldLine[i-1] && !self.worldLine[i] && self.worldLine[i+1]{
-            newLine.append(true)
-        }else if self.worldLine[i-1] && !self.worldLine[i] && !self.worldLine[i+1]{
             newLine.append(false)
+        }else if self.worldLine[i-1] && !self.worldLine[i] && self.worldLine[i+1]{
+            newLine.append(false)
+        }else if self.worldLine[i-1] && !self.worldLine[i] && !self.worldLine[i+1]{
+            newLine.append(true)
         }else if !self.worldLine[i-1] && self.worldLine[i] && self.worldLine[i+1]{
             newLine.append(true)
         }else if !self.worldLine[i-1] && self.worldLine[i] && !self.worldLine[i+1]{
