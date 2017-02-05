@@ -18,7 +18,7 @@ class GameViewController: UIViewController {
        
         for i in 0...self.worldWidth - 1 {
             
-            //if i == self.worldWidth - 1{
+//            if i == self.worldWidth - 1{
 //            if i == Int(Float(self.worldWidth) / 2.0){
 //                self.worldLine.append(true)
 //            }else{
@@ -64,7 +64,7 @@ class GameViewController: UIViewController {
   func setupCamera() {
     cameraNode = SCNNode()
     cameraNode.camera = SCNCamera()
-    cameraNode.camera?.zFar = 1000
+    cameraNode.camera?.zFar = Double(self.worldWidth * 4)
     cameraNode.position = SCNVector3(x: Float(self.worldWidth) / 2.0 , y: Float(self.worldWidth * 1) , z: Float(self.worldWidth * 2))
     scnScene.rootNode.addChildNode(cameraNode)
   }
@@ -75,10 +75,6 @@ class GameViewController: UIViewController {
     var trueGeometry:SCNGeometry
     trueGeometry = SCNSphere(radius: 0.5)
     trueGeometry.materials.first?.diffuse.contents = UIColor.green
-    
-//    var falseGeometry:SCNGeometry
-//    falseGeometry = SCNSphere(radius: 0.5)
-//    falseGeometry.materials.first?.diffuse.contents = UIColor.white
     
     var index = 0
     for state in self.worldLine {
@@ -105,7 +101,7 @@ class GameViewController: UIViewController {
         if self.worldLine[i-1] && self.worldLine[i] && self.worldLine[i+1]{
             newLine.append(false)
         } else if self.worldLine[i-1] && self.worldLine[i] && !self.worldLine[i+1]{
-            newLine.append(true)
+            newLine.append(false)
         }else if self.worldLine[i-1] && !self.worldLine[i] && self.worldLine[i+1]{
             newLine.append(false)
         }else if self.worldLine[i-1] && !self.worldLine[i] && !self.worldLine[i+1]{
@@ -113,7 +109,7 @@ class GameViewController: UIViewController {
         }else if !self.worldLine[i-1] && self.worldLine[i] && self.worldLine[i+1]{
             newLine.append(true)
         }else if !self.worldLine[i-1] && self.worldLine[i] && !self.worldLine[i+1]{
-            newLine.append(false)
+            newLine.append(true)
         }else if !self.worldLine[i-1] && !self.worldLine[i] && self.worldLine[i+1]{
             newLine.append(true)
         }else if !self.worldLine[i-1] && !self.worldLine[i] && !self.worldLine[i+1]{

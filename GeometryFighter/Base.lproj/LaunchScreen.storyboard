@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,20 +17,20 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="Logo_Diffuse.png" translatesAutoresizingMaskIntoConstraints="NO" id="BFE-eh-REj">
-                                <rect key="frame" x="44" y="44" width="512" height="512"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cellular Automata" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9TW-Vc-Q2L">
+                                <rect key="frame" x="54.5" y="313.5" width="266.5" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <animations/>
-                        <color key="backgroundColor" red="0.099521787532966782" green="0.14692300381805648" blue="0.3660862699468086" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.099521787532966782" green="0.14692300381805648" blue="0.3660862699468086" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="BFE-eh-REj" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="24" id="6Cu-bi-TK9"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="BFE-eh-REj" secondAttribute="bottom" constant="44" id="Je0-jf-ZJe"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="BFE-eh-REj" secondAttribute="trailing" constant="24" id="ayy-zM-BDh"/>
-                            <constraint firstItem="BFE-eh-REj" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="24" id="bny-RV-ML6"/>
+                            <constraint firstItem="9TW-Vc-Q2L" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="dKI-kp-pgL"/>
+                            <constraint firstItem="9TW-Vc-Q2L" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="hCa-uV-IMz"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -36,7 +39,4 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Logo_Diffuse.png" width="512" height="512"/>
-    </resources>
 </document>
