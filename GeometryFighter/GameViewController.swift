@@ -104,7 +104,7 @@ class GameViewController: UIViewController {
         if self.worldLine[i-1] && self.worldLine[i] && self.worldLine[i+1]{
             newLine.append(false)
         } else if self.worldLine[i-1] && self.worldLine[i] && !self.worldLine[i+1]{
-            newLine.append(false)
+            newLine.append(true)
         }else if self.worldLine[i-1] && !self.worldLine[i] && self.worldLine[i+1]{
             newLine.append(false)
         }else if self.worldLine[i-1] && !self.worldLine[i] && !self.worldLine[i+1]{
@@ -112,7 +112,7 @@ class GameViewController: UIViewController {
         }else if !self.worldLine[i-1] && self.worldLine[i] && self.worldLine[i+1]{
             newLine.append(true)
         }else if !self.worldLine[i-1] && self.worldLine[i] && !self.worldLine[i+1]{
-            newLine.append(true)
+            newLine.append(false)
         }else if !self.worldLine[i-1] && !self.worldLine[i] && self.worldLine[i+1]{
             newLine.append(true)
         }else if !self.worldLine[i-1] && !self.worldLine[i] && !self.worldLine[i+1]{
