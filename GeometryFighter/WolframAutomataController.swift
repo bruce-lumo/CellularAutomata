@@ -2,7 +2,7 @@
 import UIKit
 import SceneKit
 
-class GameViewController: UIViewController {
+class WolframAutomataController: UIViewController {
   
   var scnView: SCNView!
   var scnScene: SCNScene!
@@ -123,7 +123,7 @@ class GameViewController: UIViewController {
 }
 
 // 1
-extension GameViewController: SCNSceneRendererDelegate {
+extension WolframAutomataController: SCNSceneRendererDelegate {
   // 2
   func renderer(_ renderer: SCNSceneRenderer, updateAtTime time:
   TimeInterval) {
