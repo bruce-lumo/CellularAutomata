@@ -19,11 +19,12 @@ class GameViewController: UIViewController {
         for i in 0...self.worldWidth - 1 {
             
             //if i == self.worldWidth - 1{
-            if i == Int(Float(self.worldWidth) / 2.0){
-                self.worldLine.append(true)
-            }else{
-                self.worldLine.append(false)
-            }
+//            if i == Int(Float(self.worldWidth) / 2.0){
+//                self.worldLine.append(true)
+//            }else{
+//                self.worldLine.append(false)
+//            }
+            self.worldLine.append(arc4random_uniform(2) == 0)
             
         }
         super.init(coder:coder)!
